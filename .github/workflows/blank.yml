@@ -25,14 +25,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - shell: bash
-      - env:
-          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
-          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          DBT_TARGET: ${{ secrets.DBT_TARGET }}
       
       - name: Install dbt
         run: pip install dbt-snowflake==1.2.0
       
       - name: dbt smoke test
+        shell: bash
+        env:
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          DBT_TARGET: ${{ secrets.DBT_TARGET }}
         run: dbt debug --profiles-dir=cicd
