@@ -35,4 +35,4 @@ jobs:
       
       - name: dbt smoke test
         shell: bash
-        run: dbt debug --profiles-dir=cicd
+        run: dbt --debug debug --profiles-dir=cicd
