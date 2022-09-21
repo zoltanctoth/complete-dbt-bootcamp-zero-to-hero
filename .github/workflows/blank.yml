@@ -27,5 +27,6 @@ jobs:
 
       - name: Install dbt
         run: pip install dbt-snowflake==1.2.0
-        
-      - 
+      
+      - name: dbt smoke test
+        run: dbt debug --profiles-dir=cicd
