@@ -40,5 +40,20 @@ jobs:
         run: echo "$SNOWFLAKE_ACCOUNT" "$DBT_TARGET"
         
       - name: dbt smoke test
-        shell: bash
         run: dbt --profiles-dir=cicd debug
+
+      - name: Install dbt packages
+        run: dbt  --profiles-dir=cicd deps
+      
+      - name: Clean Up Test schema
+        run: echo "TODO"
+      
+      - name: Run dbt
+        run: dbt --profiles-dir=cicd run
+
+      - name: Run snapshots
+        run: dbt --profiles-dir=cicd snapshot
+        
+      - name: Run tests
+        run: dbt --profiles-dir=cicd test        
+        
