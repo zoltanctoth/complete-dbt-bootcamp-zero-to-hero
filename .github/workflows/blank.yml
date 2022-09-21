@@ -12,11 +12,14 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  test:
+    environment: dbt-env
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
@@ -34,7 +37,7 @@ jobs:
         run: pip install dbt-snowflake==1.2.0
       
       - name: debug env vars
-        run: echo $SNOWFLAKE_ACCOUNT $DBT_TARGET
+        run: echo "$SNOWFLAKE_ACCOUNT" "$DBT_TARGET"
         
       - name: dbt smoke test
         shell: bash
