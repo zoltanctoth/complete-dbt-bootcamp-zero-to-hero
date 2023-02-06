@@ -24,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
-      SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-      DBT_TARGET: ${{ secrets.DBT_TARGET }}
+      SNOWFLAKE_ACCOUNT: ${{ env.SNOWFLAKE_ACCOUNT }}
+      DBT_TARGET: ${{ env.DBT_TARGET }}
     
 
     # Steps represent a sequence of tasks that will be executed as part of the job
