@@ -5,9 +5,9 @@ dbtlearn:
       database: airbnb
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: transform
-      schema: dev
+      schema: "{{ env_var('TARGET_SCHEMA') }}"
       threads: 1
       type: snowflake
       user: dbt
       warehouse: COMPUTE_WH
-  target: "{{ env_var('DBT_TARGET') }}"
+  target: dev
