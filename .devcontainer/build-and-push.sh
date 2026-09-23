@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REGISTRY="ghcr.io"
-IMAGE_NAME="nordquant/complete-dbt-bootcamp-zero-to-hero/dbt-bootcamp-devcontainer"
+IMAGE_NAME="zoltanctoth/complete-dbt-bootcamp-zero-to-hero/dbt-bootcamp-devcontainer"
 IMAGE="${REGISTRY}/${IMAGE_NAME}"
 SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0" 2>/dev/null || realpath "$0")")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -15,7 +15,7 @@ if [ -z "${NQ_GITHUB_TOKEN:-}" ]; then
 fi
 
 echo "==> Logging in to GitHub Container Registry"
-echo "$NQ_GITHUB_TOKEN" | docker login "$REGISTRY" -u nordquant --password-stdin
+echo "$Z_GITHUB_TOKEN" | docker login "$REGISTRY" -u zoltanctoth --password-stdin
 
 echo "==> Ensuring buildx builder exists"
 docker buildx inspect multiplatform >/dev/null 2>&1 \

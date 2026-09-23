@@ -1,6 +1,6 @@
 {
 	"name": "dbt Zero to Hero",
-	"image": "ghcr.io/nordquant/complete-dbt-bootcamp-zero-to-hero/dbt-bootcamp-devcontainer:latest",
+	"image": "ghcr.io/zoltanctoth/complete-dbt-bootcamp-zero-to-hero/dbt-bootcamp-devcontainer:latest",
 	"forwardPorts": [
 		5000
 	],
