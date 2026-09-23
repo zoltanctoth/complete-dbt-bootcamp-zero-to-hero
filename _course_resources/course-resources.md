@@ -157,7 +157,7 @@ GRANT SELECT ON FUTURE TABLES IN SCHEMA AIRBNB.DEV to ROLE REPORTER;
 _Only execute these commands if you decided to skip the Automated Snowflake Setup._
 
 Copy these SQL statements into a Snowflake Worksheet:
-https://github.com/nordquant/dbtlearn-snowflake-importer/blob/main/capstone-resources.md
+https://github.com/zoltanctoth/dbtlearn-snowflake-importer/blob/main/capstone-resources.md
 
 ## dbt installation
 
