@@ -29,7 +29,7 @@ env:
 
 jobs:
   build:
-    if: github.repository == 'nordquant/complete-dbt-bootcamp-zero-to-hero'
+    if: (github.repository == 'zoltanctoth/complete-dbt-bootcamp-zero-to-hero' || github.repository == 'nordquant/complete-dbt-bootcamp-zero-to-hero')
     name: ${{ matrix.python-version == '3.13' && format('dbt full build ({0})', matrix.python-version) || format('dbt debug ({0})', matrix.python-version) }}
     runs-on: ${{ matrix.runs-on }}
     strategy:
@@ -118,7 +118,7 @@ jobs:
         PATH="$HOME/.local/bin:$PATH" bash ../.github/scripts/test_commands.sh fusion
 
   windows-quote-test:
-    if: github.repository == 'nordquant/complete-dbt-bootcamp-zero-to-hero' && github.event_name == 'workflow_dispatch'
+    if: (github.repository == 'zoltanctoth/complete-dbt-bootcamp-zero-to-hero' || github.repository == 'nordquant/complete-dbt-bootcamp-zero-to-hero') && github.event_name == 'workflow_dispatch'
     name: dbt inline quoting (Windows / ${{ matrix.shell }})
     runs-on: windows-latest
     strategy:

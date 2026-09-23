@@ -16,7 +16,7 @@ permissions:
 jobs:
   build:
     name: Production deps and build
-    if: github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
+    if: github.repository != 'zoltanctoth/complete-dbt-bootcamp-zero-to-hero' && github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
     runs-on: ubuntu-latest
     env:
       SNOWFLAKE_ACCOUNT:      "${{ secrets.SNOWFLAKE_ACCOUNT }}"
