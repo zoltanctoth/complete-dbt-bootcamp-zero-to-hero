@@ -92,7 +92,7 @@ models:
           arguments:
             compare_model: source('airbnb', 'listings')
     columns:
-      - name: price
+      - name: price_usd
         data_tests:
           - dbt_expectations.expect_column_values_to_be_of_type:
               arguments:
