@@ -10,6 +10,7 @@ SELECT
     dl.room_type,
     dl.minimum_nights,
     dl.price AS price_usd,
+    dl.price_str,
     dl.host_id,
     dh.host_name,
     dh.is_superhost as host_is_superhost,
