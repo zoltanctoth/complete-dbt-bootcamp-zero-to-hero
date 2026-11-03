@@ -3,7 +3,7 @@ unit_tests:
     model: mart_fullmoon_reviews
     given:
       - input: ref('fct_reviews')
-        rows: 
+        rows:
           - {review_date: '2025-01-13'}
           - {review_date: '2025-01-14'}
           - {review_date: '2025-01-15'}

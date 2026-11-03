@@ -1,17 +1,15 @@
 import holidays
 
-
 def is_holiday(date_col):
     german_holidays = holidays.Germany()
     is_holiday = (date_col in german_holidays)
     return is_holiday
 
-
 def model(dbt, session):
     dbt.config(
-        materialized="table",
-        packages=["holidays", "snowflake-connector-python[pandas]"]
-        # enabled=False # We are adding this line in the Model Lifecycle / Disabling Models section
+        materialized = "table",
+        packages = ["holidays", "snowflake-connector-python[pandas]"],
+        enabled = False
     )
 
     orders_df = dbt.ref("seed_full_moon_dates")

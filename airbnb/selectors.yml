@@ -7,4 +7,5 @@ selectors:
           value: models/dim
         - exclude:
             - method: fqn
-              value: dim_listings_w_hosts
+              value: dim_listings_with_hosts
+

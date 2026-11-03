@@ -1,13 +1,13 @@
 {{
-  config(
-    materialized = 'view',
-    event_time='created_at'
-  )
-}} 
+    config(
+        materialized='view',
+        event_time='created_at'
+    )
+}}
 WITH src_listings AS (
-    SELECT * FROM {{ ref('src_listings') }}
+    SELECT * FROM {{ ref('src_listings') }} -- Jinja syntax (template engine for Python)
 )
-SELECT 
+SELECT
   listing_id,
   listing_name,
   room_type,

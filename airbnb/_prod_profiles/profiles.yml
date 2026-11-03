@@ -1,4 +1,4 @@
-airbnb:
+airbnb_profile:
   outputs:
     staging:
       type: snowflake
