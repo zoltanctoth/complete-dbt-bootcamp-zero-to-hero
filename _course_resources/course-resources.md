@@ -7,7 +7,7 @@ The easiest way is to take a look at your Snowflake Registration email and copy 
 
 ## Automated Snowflake Setup
 I encourage you to go through the automated Snowflake Setup as importing the data and setting the permissions from scratch might take quite some time.
-Follow the instructions here https://dbtsetup.nordquant.com/  to set up your Snowflake database with a click of a button! ( If you encounter any issues with the link below, here is a backup service of the same application: https://udemy-dbt-setup.streamlit.app/ )
+Follow the instructions here https://dbtsetup.nordquant.com/  to set up your Snowflake database with a click of a button! ( If you encounter any issues with the link below, here is a backup service of the same application: https://dbt-bootcamp-setup.streamlit.app/ )
 
 ## Snowflake data import (manual)
 _Only execute these commands if you decided to skip the Automated Snowflake Setup._
@@ -17,7 +17,7 @@ It you want to generate key pairs on Windows, PuttyGen is quite intuitive. If yo
 Resources presented:
 * [Snowflake Key-Pair Authentication page](https://docs.snowflake.com/en/user-guide/key-pair-auth)
 * [PuttyGen for Windows](https://puttygen.com/)
-* [AirBnb Source data locations](https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero/blob/main/_course_resources/source-data-locations.md)
+* [AirBnb Source data locations](https://github.com/zoltanctoth/complete-dbt-bootcamp-zero-to-hero/blob/main/_course_resources/source-data-locations.md)
 
 Copy these SQL statements into a Snowflake Worksheet, fill in the public key, select all and execute them (i.e. pressing the play button).
 
@@ -157,12 +157,12 @@ GRANT SELECT ON FUTURE TABLES IN SCHEMA AIRBNB.DEV to ROLE REPORTER;
 _Only execute these commands if you decided to skip the Automated Snowflake Setup._
 
 Copy these SQL statements into a Snowflake Worksheet:
-https://github.com/nordquant/dbtlearn-snowflake-importer/blob/main/capstone-resources.md
+https://github.com/zoltanctoth/dbtlearn-snowflake-importer/blob/main/capstone-resources.md
 
 ## dbt installation
 
 * Supported Python Versions: https://docs.getdbt.com/faqs/Core/install-python-compatibility
-* Student Repo: https://github.com/nordquant/dbt-student-repo
+* Student Repo: https://github.com/zoltanctoth/dbt-student-repo
 * uv Installation guide: https://docs.astral.sh/uv/getting-started/installation/
 
 ### uv Environment Setup
@@ -540,7 +540,7 @@ FROM
 # Snapshots
 
 ## Snapshots for listing
-The contents of `snapshots/raw_listins_snapshot.yml`:
+The contents of `snapshots/raw_listings_snapshot.yml`:
 ```yaml
 snapshots:
   - name: scd_raw_listings
@@ -1044,7 +1044,7 @@ exposures:
 * dbt-expectations: https://github.com/metaplane/dbt-expectations
 
 For the final code in _packages.yml_, _models/schema.yml_ and _models/sources.yml_, please refer to the course's Github repo:
-https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero
+https://github.com/zoltanctoth/complete-dbt-bootcamp-zero-to-hero
 
 ## Testing a single model
 
@@ -1489,11 +1489,11 @@ Building for `prod` with the new profile (custom schema materialization test):
 dbt build --target prod --profiles-dir=_prod_profiles --empty
 ```
 
-The custom schema behavior is defined in [`macros/generate_schema_name.sql`](../airbnb/macros/generate_schema_name.sql).
+The custom schema behavior is defined in [`macros/generate_schema_name.sql`](https://github.com/zoltanctoth/complete-dbt-bootcamp-zero-to-hero/blob/main/airbnb/macros/generate_schema_name.sql).
 
 ## Cleaning up Schemas
 
-The schema cleanup behavior is defined in [`macros/drop_dev_schemas.sql`](../airbnb/macros/drop_dev_schemas.sql).
+The schema cleanup behavior is defined in [`macros/drop_dev_schemas.sql`](https://github.com/zoltanctoth/complete-dbt-bootcamp-zero-to-hero/blob/main/airbnb/macros/drop_dev_schemas.sql).
 
 Run this command to execute it:
 ```
@@ -1546,7 +1546,7 @@ https://github.com/zoltanctoth/dbt-reference-production-repo
 
 ## Working with Legacy Code
 
-Please copy [these two files](https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero/tree/poweruser/airbnb/models/intermediate) into the repo so that you have the same `intermediate` files Steven uses.
+Please copy [these two files](https://github.com/zoltanctoth/complete-dbt-bootcamp-zero-to-hero/tree/poweruser/airbnb/models/intermediate) into the repo so that you have the same `intermediate` files Steven uses.
 
 ## Building Models with AI
 
